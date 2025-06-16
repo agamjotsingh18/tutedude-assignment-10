@@ -1,3 +1,15 @@
+# Frontend React App with Tailwind CSS
+
+This project is a React frontend built using **create-react-app** and styled with **Tailwind CSS**.
+
+## 🚀 Features
+
+✅ React 19  
+✅ Tailwind CSS 3  
+✅ Heroicons + React Bootstrap  
+✅ PostCSS + Autoprefixer  
+✅ Ready for deployment on **Netlify** and **Vercel**
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
