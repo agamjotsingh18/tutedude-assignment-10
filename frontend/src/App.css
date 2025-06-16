@@ -3,13 +3,197 @@
 @tailwind utilities;
 
 
-/* Add to your index.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: linear-gradient(to right, #d663fd, #700a72);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-title {
+  margin: 0;
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.header-emoji {
+  margin-right: 0.5rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.create-note {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.create-note:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.create-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.note-input, .note-textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #eee;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.note-input:focus, .note-textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #9c27b0;
+}
+
+.note-textarea {
+  resize: none;
+}
+
+.add-btn {
+  background: linear-gradient(to right, #a449b3, #b42589);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.add-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 10px rgba(156, 39, 176, 0.3);
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Note Card */
+.note-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.note-title {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.note-text {
+  margin: 0 0 1.5rem 0;
+  color: #555;
+  white-space: pre-wrap;
+}
+
+.delete-btn {
+  background: linear-gradient(to right, #a449b3, #b42589);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(to right, #e36cf3, #a45b8e);
+}
+
+/* Empty State */
+.empty-notes {
+  text-align: center;
+  padding: 3rem;
+}
+
+.empty-message {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.app-footer {
+  background: #333;
+  color: #aaa;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-subtext {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.6s ease-out both;
+  animation: fadeIn 0.6s ease-out;
 }
-
